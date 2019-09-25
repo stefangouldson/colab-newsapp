@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240,60,5);
+    color: white;
+}
+
+#title{
+    text-align: center;
+    text-decoration: underline;
+}
