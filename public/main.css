@@ -20,6 +20,22 @@ button{
     justify-content: center;
 }
 
+.main-cont {
+    margin: 0 auto 0 auto;
+    width: 80%;
+
+    justify-content: center;
+    border: 2px solid black;
+}
+.main-story-cont {
+    display: flex;
+}
+
+.main-story-img-cont {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
