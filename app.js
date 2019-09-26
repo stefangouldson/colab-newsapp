@@ -13,8 +13,8 @@ const main = async (places) => {
         author: news.author,
         content:news.content,
         date: news.publishedAt,
-        url:news.url,
-        img:news.urlToImage
+        url: news.url,
+        img: news.urlToImage
     };
     
 }
