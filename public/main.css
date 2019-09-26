@@ -5,13 +5,40 @@ body{
     color: white;
 }
 
-.main-cont {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
 #title{
     text-align: center;
     text-decoration: underline;
+}
+button{
+    background-color: aqua;
+    font-size: 150%;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#filter{
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#dropdown-content{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+#dropdown-content:hover{
+    display: flex;
+    flex-direction: column;
+    opacity: 100;
 }
