@@ -6,10 +6,15 @@ const main = async (places) => {
     const news = await getNews(location)
     
     return {
-        place: location.name,
-        temp: temp,
-        summary: weather.summary,
-        icon: weather.icon
+        // thing we want to return
+        place: location,
+        title: news.title,
+        summary: news.description,
+        author: news.author,
+        content:news.content,
+        date: news.publishedAt,
+        url:news.url,
+        img:news.urlToImage
     };
     
 }
