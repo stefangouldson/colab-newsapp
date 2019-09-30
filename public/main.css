@@ -16,9 +16,20 @@ align-items: center;
     text-decoration: underline;
 }
 
-button{
-    background-color: aqua;
-    font-size: 150%;
+#but{
+    background-color:#3498DB;
+    font-size: 16px;
+    border: none;
+    color: white;
+    margin-left: 1%;
+}
+
+#but:hover{
+  background-color: #2980B9
+}
+
+#but:active{
+  transform: translateY(3px)
 }
 
 #inputs{
@@ -26,6 +37,7 @@ button{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 1%;
+    font-size: 16px;
 }
 
 .main-cont {
@@ -60,6 +72,8 @@ button{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    height: 100%;
+    margin-left: 1%
   }
   
   /* Dropdown button on hover & focus */
@@ -96,3 +110,8 @@ button{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+
+  #country{
+    font-size: 16px;
+  }
