@@ -34,3 +34,4 @@ window.onclick = function(event) {
   }
 }
 
+document.getElementById("country").innerText="type country"
