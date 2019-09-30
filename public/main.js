@@ -1,12 +1,13 @@
-const button = document.getElementsByClassName('dropbtn');
+
 const button = document.getElementById('but');
-const input = document.getElementById('location');
+const input = document.getElementById('country');
 const title = document.getElementsByClassName('main-story-title');
 const content = document.getElementsByClassName('main-story-text');
 const img = document.getElementsByClassName('main-story-img-cont');
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
+const drpDown = document.getElementById("drpDownButton");
 
 let newsType = "";
 
@@ -15,19 +16,19 @@ button.addEventListener('click', async () => {
     title.textContent= " ";
     img.textContent = " ";
     content.innerHTML = " ";
-
     let response = await fetch(`http://localhost:3006/news?${input.value}=${newsType}`);
     let data = await response.json();
     console.log(data.content)
     content.innerHTML = data.content;
     title.innerHTML = data.title;
     img.innerHTML = data.urlTOImage;
-
+    
 })
 
-function myFunction() {
+
+drpDown.addEventListener("click", ()=> {
   document.getElementById("myDropdown").classList.toggle("show");
-}
+})
 
 gen.addEventListener("click", ()=> {
     newsType = "general"
