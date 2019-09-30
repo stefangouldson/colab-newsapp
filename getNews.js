@@ -4,13 +4,13 @@ const promisifiedRequest = promisify(request)
 const{apiKey} = require('./keys')
 
 // get news from api, need to add type of news later.
-const getNews = async(location) => {
+const getNews = async(location, cat) => {
     try{
         let data = await
     promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=gb&category=sport&apiKey=${apiKey}`,json: true})
     //returns JSON string that returns evrything int the article object 
-    return(data.body.articles)
- }  catch (error){
+    return(data1.body.articles)
+}  catch (error){
         console.log("Something has gone wrong!")
     }
 }
