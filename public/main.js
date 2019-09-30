@@ -1,9 +1,9 @@
+const button = document.getElementsByClassName('dropbtn');
 const button = document.getElementById('but');
 const input = document.getElementById('location');
-const title = document.getElementById('place');
-const content = document.getElementById('summary');
-const img = document.getElementById('image');
-
+const title = document.getElementsByClassName('main-story-title');
+const content = document.getElementsByClassName('main-story-text');
+const img = document.getElementsByClassName('main-story-img-cont');
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
@@ -16,11 +16,13 @@ button.addEventListener('click', async () => {
     img.textContent = " ";
     content.innerHTML = " ";
 
-    let response = await fetch(`http://localhost:3006/weather?location=${input.value}`);
-    let data1 = await response.json();
-    img.innerHTML = data1[0].urlToImage;
-    content.textContent = data1[0].content;
-    title.textContent = data1[0].title
+    let response = await fetch(`http://localhost:3006/news?${input.value}=${newsType}`);
+    let data = await response.json();
+    console.log(data.content)
+    content.innerHTML = data.content;
+    title.innerHTML = data.title;
+    img.innerHTML = data.urlTOImage;
+
 })
 
 function myFunction() {
@@ -65,3 +67,4 @@ window.onclick = function(event) {
 }
 
 document.getElementById("country").innerText="type country"
+

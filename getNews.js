@@ -7,9 +7,10 @@ const{apiKey} = require('./keys')
 const getNews = async(location, cat) => {
     try{
         let data = await
-    promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=gb&category=sport&apiKey=${apiKey}`,json: true})
+    promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=${location}&category=${cat}&apiKey=${apiKey}`, json: true})
     //returns JSON string that returns evrything int the article object 
-    return(data1.body.articles)
+    console.log(data.body.articles[0])
+    return(data.body.articles[0])
 }  catch (error){
         console.log("Something has gone wrong!")
     }
