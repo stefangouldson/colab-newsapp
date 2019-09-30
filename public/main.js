@@ -33,6 +33,20 @@ gen.addEventListener("click", ()=> {
     console.log(newsType);
   })
 
+sprt.addEventListener("click", ()=> {
+    newsType = "sport"
+    document.getElementById('drpDownButton').innerText = "Sport"
+    console.log(newsType);
+  })
+
+bus.addEventListener("click", ()=> {
+    newsType = "business"
+    document.getElementById('drpDownButton').innerText = "Business"
+    console.log(newsType);
+  })
+
+
+
 
 
 
