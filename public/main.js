@@ -7,6 +7,10 @@ const img = document.getElementById('myPic');
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
+const ent = document.getElementById('entertainment')
+const hea = document.getElementById('health')
+const sci = document.getElementById('science')
+const tec = document.getElementById('technology')
 const drpDown = document.getElementById("drpDownButton");
 
 let newsType = "";
@@ -43,8 +47,29 @@ bus.addEventListener("click", ()=> {
     console.log(newsType);
   })
 
+  ent.addEventListener("click", ()=> {
+    newsType = "entertainment"
+    document.getElementById('drpDownButton').innerText = "Entertainment"
+    console.log(newsType);
+  })
 
+  hea.addEventListener("click", ()=> {
+    newsType = "health"
+    document.getElementById('drpDownButton').innerText = "Health"
+    console.log(newsType);
+  })
 
+  sci.addEventListener("click", ()=> {
+    newsType = "science"
+    document.getElementById('drpDownButton').innerText = "Science"
+    console.log(newsType);
+  })
+
+  tec.addEventListener("click", ()=> {
+    newsType = "technology"
+    document.getElementById('drpDownButton').innerText = "Technology"
+    console.log(newsType);
+  })
 
 
 
