@@ -9,6 +9,7 @@ const getNews = async(location, cat) => {
         let data = await
     promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=${location}&category=${cat}&apiKey=${apiKey}`, json: true})
     //returns JSON string that returns evrything int the article object 
+    console.log(data.body.articles[0])
     return(data.body.articles[0])
 }  catch (error){
         console.log("Something has gone wrong!")
