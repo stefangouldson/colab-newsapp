@@ -1,9 +1,9 @@
 
 const button = document.getElementById('but');
 const input = document.getElementById('country');
-const title = document.getElementsByClassName('main-story-title');
-const content = document.getElementsByClassName('main-story-text');
-const img = document.getElementsByClassName('main-story-img-cont');
+const title = document.getElementById('main-story-title');
+const content = document.getElementById('main-story-text');
+const img = document.getElementById('myPic');
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
@@ -13,17 +13,13 @@ let newsType = "";
 
 
 button.addEventListener('click', async () => {
-    title.textContent= " ";
-    img.textContent = " ";
-    content.innerHTML = " ";
-    let response = await fetch(`http://localhost:3006/news?${input.value}=${newsType}`);
+    let response = await fetch(`http://localhost:3005/news?location=${input.value}&cat=${newsType}`);
     let data = await response.json();
-    console.log(data.content)
-    content.innerHTML = data.content;
-    title.innerHTML = data.title;
-    img.innerHTML = data.urlTOImage;
-    
-})
+    // console.log(data.title)
+    content.innerText = data.content;
+    title.innerText = data.title;
+    img.src = data.urlTOImage;
+  })
 
 
 drpDown.addEventListener("click", ()=> {
