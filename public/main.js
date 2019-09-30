@@ -1,33 +1,33 @@
-const button = document.getElementsByClassName('dropbtn');
+
 const button = document.getElementById('but');
-const input = document.getElementById('location');
-const title = document.getElementsByClassName('main-story-title');
-const content = document.getElementsByClassName('main-story-text');
-const img = document.getElementsByClassName('main-story-img-cont');
+const input = document.getElementById('country');
+const title = document.getElementById('main-story-title');
+const content = document.getElementById('main-story-text');
+const img = document.getElementById('myPic');
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
+const ent = document.getElementById('entertainment')
+const hea = document.getElementById('health')
+const sci = document.getElementById('science')
+const tec = document.getElementById('technology')
+const drpDown = document.getElementById("drpDownButton");
 
 let newsType = "";
 
 
 button.addEventListener('click', async () => {
-    title.textContent= " ";
-    img.textContent = " ";
-    content.innerHTML = " ";
-
-    let response = await fetch(`http://localhost:3006/news?${input.value}=${newsType}`);
+    let response = await fetch(`http://localhost:3005/news?location=${input.value}&cat=${newsType}`);
     let data = await response.json();
-    console.log(data.content)
-    content.innerHTML = data.content;
-    title.innerHTML = data.title;
-    img.innerHTML = data.urlTOImage;
+    content.innerText = data.content;
+    title.innerText = data.title;
+    img.src = data.image;
+  })
 
-})
 
-function myFunction() {
+drpDown.addEventListener("click", ()=> {
   document.getElementById("myDropdown").classList.toggle("show");
-}
+})
 
 gen.addEventListener("click", ()=> {
     newsType = "general"
@@ -47,8 +47,29 @@ bus.addEventListener("click", ()=> {
     console.log(newsType);
   })
 
+  ent.addEventListener("click", ()=> {
+    newsType = "entertainment"
+    document.getElementById('drpDownButton').innerText = "Entertainment"
+    console.log(newsType);
+  })
 
+  hea.addEventListener("click", ()=> {
+    newsType = "health"
+    document.getElementById('drpDownButton').innerText = "Health"
+    console.log(newsType);
+  })
 
+  sci.addEventListener("click", ()=> {
+    newsType = "science"
+    document.getElementById('drpDownButton').innerText = "Science"
+    console.log(newsType);
+  })
+
+  tec.addEventListener("click", ()=> {
+    newsType = "technology"
+    document.getElementById('drpDownButton').innerText = "Technology"
+    console.log(newsType);
+  })
 
 
 
