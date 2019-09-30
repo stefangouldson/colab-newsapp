@@ -14,14 +14,28 @@ const getNews = async(location, cat) => {
     // console.log(data.body.articles[0])
     
         let random = Math.floor(Math.random() * 20);
-      
 
     return {
         body: data.body.articles[random],
         title: data.body.articles[random].title,
-        content: data.body.articles[random].description,
-        image: data.body.articles[random].urlToImage
-    } 
+        conten: data.body.articles[random].description,
+        image: data.body.articles[random].urlToImage,
+
+        body2: data.body.articles[random+1],
+        title2: data.body.articles[random+1].title,
+        content2: data.body.articles[random+1].description,
+        image2: data.body.articles[random+1].urlToImage,
+
+        body3: data.body.articles[random+2],
+        title3: data.body.articles[random+2].title,
+        content3: data.body.articles[random+2].description,
+        image3: data.body.articles[random+2].urlToImage,
+
+        body4: data.body.articles[random+3],
+        title4: data.body.articles[random+3].title,
+        content4: data.body.articles[random+3].description,
+        image4: data.body.articles[random+3].urlToImage,
+    }
 }  catch (error){
         console.log("Something has gone wrong!")
     }
