@@ -4,6 +4,13 @@ const title = document.getElementById('place');
 const content = document.getElementById('summary');
 const img = document.getElementById('image');
 
+const gen = document.getElementById('general');
+const sprt = document.getElementById('sport');
+const bus = document.getElementById('business');
+
+let newsType = "";
+
+
 button.addEventListener('click', async () => {
     title.textContent= " ";
     img.textContent = " ";
@@ -19,6 +26,15 @@ button.addEventListener('click', async () => {
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+gen.addEventListener("click", ()=> {
+    newsType = "general"
+    document.getElementById('drpDownButton').innerText = "General"
+    console.log(newsType);
+  })
+
+
+
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
