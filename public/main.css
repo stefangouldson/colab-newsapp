@@ -45,11 +45,11 @@ button{
 
 .main-story-img-cont {
    width: 50%;
-   height: 200px;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-image: url(https://ichef.bbci.co.uk/images/ic/720x405/p05vtkdr.jpg)
+}
+
+#myPic{
+  max-width: 100%;
+  min-height: 100%;
 }
 
 /* Dropdown Button */
