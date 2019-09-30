@@ -15,10 +15,9 @@ let newsType = "";
 button.addEventListener('click', async () => {
     let response = await fetch(`http://localhost:3005/news?location=${input.value}&cat=${newsType}`);
     let data = await response.json();
-    // console.log(data.title)
     content.innerText = data.content;
     title.innerText = data.title;
-    img.src = data.urlTOImage;
+    img.src = data.image;
   })
 
 
