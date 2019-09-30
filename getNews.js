@@ -6,8 +6,8 @@ const{apiKey} = require('./keys')
 // get news from api, need to add type of news later.
 const getNews = async(location) => {
     try{
-        let data = await
-    promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=${location}s&category=buissness&apiKey=${apiKey}`,json: true})
+        let data1 = await
+    promisifiedRequest({url: `https://newsapi.org/v2/top-headlines?country=us&category=buissness&apiKey=${apiKey}`,json: true})
     //returns JSON string that returns evrything int the article object 
     return(data.body.articles)
 }  catch (error){
