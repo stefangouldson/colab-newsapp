@@ -5,13 +5,94 @@ body{
     color: white;
 }
 
-.main-cont {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+#page{
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 #title{
     text-align: center;
     text-decoration: underline;
 }
+
+button{
+    background-color: aqua;
+    font-size: 150%;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.main-cont {
+    margin: 0;
+    width: 80%;
+    border: 2px solid black;
+}
+.main-story-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-story-title-and-text-cont{
+  width: 50%;
+  padding: 1%;
+}
+
+.main-story-img-cont {
+   width: 50%;
+   height: 200px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(https://ichef.bbci.co.uk/images/ic/720x405/p05vtkdr.jpg)
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
