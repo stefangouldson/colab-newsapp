@@ -1,9 +1,24 @@
 
 const button = document.getElementById('but');
 const input = document.getElementById('country');
+
+
 const title = document.getElementById('main-story-title');
 const content = document.getElementById('main-story-text');
 const img = document.getElementById('myPic');
+
+const title2 = document.getElementById('sub-story2-title');
+const content2 = document.getElementById('sub-story2-text');
+const img2 = document.getElementById('myPic2');
+
+const title3 = document.getElementById('sub-story3-title');
+const content3 = document.getElementById('sub-story3-text');
+const img3 = document.getElementById('myPic3');
+
+const title4 = document.getElementById('sub-story4-title');
+const content4 = document.getElementById('sub-story4-text');
+const img4 = document.getElementById('myPic4');
+
 const gen = document.getElementById('general');
 const sprt = document.getElementById('sport');
 const bus = document.getElementById('business');
@@ -19,9 +34,22 @@ let newsType = "";
 button.addEventListener('click', async () => {
     let response = await fetch(`http://localhost:3005/news?location=${input.value}&cat=${newsType}`);
     let data = await response.json();
+
     content.innerText = data.content;
     title.innerText = data.title;
     img.src = data.image;
+
+    content2.innerText = data.content2;
+    title2.innerText = data.title2;
+    img2.src = data.image2;
+
+    content3.innerText = data.content3;
+    title3.innerText = data.title3;
+    img3.src = data.image3;
+
+    content4.innerText = data.content4;
+    title4.innerText = data.title4;
+    img4.src = data.image4;
   })
 
 
