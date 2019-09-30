@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-const button = document.getElementById('but');
+
+const button = document.getElementsByClassName('dropbtn');
 const input = document.getElementById('location');
-const title = document.getElementById('place');
-const content = document.getElementById('summary');
-const img = document.getElementById('image');
+const title = document.getElementsByClassName('main-story-title');
+const content = document.getElementsByClassName('main-story-text');
+const img = document.getElementsByClassName('main-story-img-cont');
 
 button.addEventListener('click', async () => {
     title.textContent= " ";
@@ -11,13 +11,14 @@ button.addEventListener('click', async () => {
     content.innerHTML = " ";
 
 
-    let response = await fetch(`http://localhost:3006/weather?location=${input.value}`);
-    let data1 = await response.json();
-    img.innerHTML = data1[0].urlToImage;
-    content.textContent = data1[0].content;
-    title.textContent = data1[0].title
+    let response = await fetch(`http://localhost:3006/news?${input.value}=${newsType}`);
+    let data = await response.json();
+    console.log(data.content)
+    content.innerHTML = data.content;
+    title.innerHTML = data.title;
+    img.innerHTML = data.urlTOImage;
 })
-=======
+
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -35,4 +36,3 @@ window.onclick = function(event) {
     }
   }
 }
->>>>>>> 7798eb6793d2dcc516995e0d7f108890d84fcb2c
