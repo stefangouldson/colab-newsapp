@@ -12,16 +12,21 @@ const hea = document.getElementById('health')
 const sci = document.getElementById('science')
 const tec = document.getElementById('technology')
 const drpDown = document.getElementById("drpDownButton");
+const info=document.getElementById('info')
 
 let newsType = "";
-
+const main=document.getElementById('main-cont')
+main.style.display='none'
 
 button.addEventListener('click', async () => {
+    document.getElementById('load').innerHTML="Loading..."
     let response = await fetch(`http://localhost:3005/news?location=${input.value}&cat=${newsType}`);
     let data = await response.json();
     content.innerText = data.content;
     title.innerText = data.title;
     img.src = data.image;
+    main.style.display="block";
+    info.style.display='none'
   })
 
 
