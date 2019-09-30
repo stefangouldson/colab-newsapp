@@ -9,11 +9,7 @@ const main = async (places) => {
         // thing we want to return
         place: location,
         title: news.title,
-        summary: news.description,
-        author: news.author,
         content:news.content,
-        date: news.publishedAt,
-        url:news.url,
         img:news.urlToImage
     };
     
