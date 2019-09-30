@@ -84,7 +84,7 @@ button{
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  .dropDownMenuLi{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -92,7 +92,10 @@ button{
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
+  .dropDownMenuLi:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
