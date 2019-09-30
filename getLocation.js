@@ -10,7 +10,6 @@ const getLocation = async (places) => {
         return({
             // returns the shorthand country code "US"
             location: data1.body.place.place.features[0].context[3].short_code,
-
         })
     } catch (error) {
         console.log("ooops error has occured")
