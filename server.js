@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/news", async (req, res)=>{
    let data1 = await main(req.query.location);
    let data2 = await main(req.query.type);
-   res.send(data);
+   res.send(data1);
 });
 app.listen(3006, () => {
    console.log("listening to port 3006");

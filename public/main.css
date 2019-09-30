@@ -5,10 +5,17 @@ body{
     color: white;
 }
 
+#page{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
 #title{
     text-align: center;
     text-decoration: underline;
 }
+
 button{
     background-color: aqua;
     font-size: 150%;
@@ -18,22 +25,31 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 1%;
 }
 
 .main-cont {
-    margin: 0 auto 0 auto;
+    margin: 0;
     width: 80%;
-
-    justify-content: center;
     border: 2px solid black;
 }
 .main-story-cont {
     display: flex;
+    justify-content: space-between;
+}
+
+.main-story-title-and-text-cont{
+  width: 50%;
+  padding: 1%;
 }
 
 .main-story-img-cont {
-    display: flex;
-    justify-content: flex-end;
+   width: 50%;
+   height: 200px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(https://ichef.bbci.co.uk/images/ic/720x405/p05vtkdr.jpg)
 }
 
 /* Dropdown Button */
