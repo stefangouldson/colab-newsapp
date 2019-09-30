@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const button = document.getElementById('but');
 const input = document.getElementById('location');
 const title = document.getElementById('place');
@@ -17,7 +17,7 @@ button.addEventListener('click', async () => {
     content.textContent = data1[0].content;
     title.textContent = data1[0].title
 })
-=======
+
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -35,4 +35,4 @@ window.onclick = function(event) {
     }
   }
 }
->>>>>>> 7798eb6793d2dcc516995e0d7f108890d84fcb2c
+
