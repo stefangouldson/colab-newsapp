@@ -18,7 +18,7 @@ const getNews = async(location, cat) => {
     return {
         body: data.body.articles[random],
         title: data.body.articles[random].title,
-        conten: data.body.articles[random].description,
+        content: data.body.articles[random].description,
         image: data.body.articles[random].urlToImage,
 
         body2: data.body.articles[random+1],
