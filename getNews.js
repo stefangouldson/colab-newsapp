@@ -13,7 +13,7 @@ const getNews = async(location, cat) => {
     //returns JSON string that returns evrything int the article object
     // console.log(data.body.articles[0])
     
-        let random = Math.floor(Math.random() * 10);
+        let random = Math.floor(Math.random() * 20);
       
 
     return {
